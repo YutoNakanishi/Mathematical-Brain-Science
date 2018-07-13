@@ -29,7 +29,7 @@ int main(void) {
   double y[NUM_TRAIN][NUM_HIDDEN+1];
   double z[NUM_TRAIN];
   double eta = 0.1;
-  int epoch = 1000000;
+  int epoch = 100000;
   //other
   int i, j, k, l;
   double tmp = 0;
@@ -82,8 +82,8 @@ int main(void) {
     for(i=0; i<NUM_TRAIN; i++) {
       //      printf("%f ", z[i]);
     }
-    printf("los:%f",(z[j] - d[j])*(z[j] - d[j])/2);
-    printf("epoch:%d\n",k);
+    printf("los : %f ",(z[j] - d[j])*(z[j] - d[j])/2);
+    printf("epoch : %d\n",k);
   }
 
   //predict
@@ -108,8 +108,8 @@ int main(void) {
   //print result
   printf("z=");
   for(i=0; i<NUM_TRAIN; i++) {
-    printf("%f ", z[i]);
+  //  printf("%f ", z[i]);
   }
-  printf("epoch:%d\n",k);
+  //printf("epoch:%d\n",k);
   return 0;
 }

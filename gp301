@@ -1,0 +1,6 @@
+# set terminal postscript "Helvetica" 24 color eps enhanced
+set xlabel "t"
+set ylabel "x,y"
+set nokey # これを含めると，凡例が表示されない．
+set style line 1 lt 1 lw 5 pt 3 ps 1.0 # lw 5 は線の太さ．
+plot [0:10000][0:1] "result.dat" using 6:3 with lines linestyle 1,\
